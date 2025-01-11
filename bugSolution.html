@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug Solution</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text is initially visible.
+  </div>
+  <button onclick="myFunction()">Click Me</button>
+
+  <script>
+    function myFunction() {
+      // Solution 1: Remove the element entirely
+      document.getElementById("myDiv").remove();
+
+      // Solution 2:  Set the height to 0 to collapse the space
+      // document.getElementById("myDiv").style.height = "0px";
+
+      // Solution 3: Use a class to toggle visibility
+      //  Add a class in CSS: .hidden { display: none; }
+      // document.getElementById("myDiv").classList.add("hidden");
+    }
+  </script>
+</body>
+</html>
